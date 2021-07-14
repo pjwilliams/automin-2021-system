@@ -1,0 +1,12 @@
+__pycache__
+nohup.out
+tmp
+
+/venv
+
+3rd-party/automin-2021-confidential-data/
+3rd-party/bert-extractive-summarizer/
+
+data/*json
+
+minuter/outputs
