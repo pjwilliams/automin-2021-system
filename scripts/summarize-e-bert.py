@@ -10,10 +10,6 @@ MODEL = Summarizer()
 
 def summarize(doc, ratio, sents_per_cluster=1, return_indices=False):
     if return_indices or sents_per_cluster > 1:
-
-        optimal_k = MODEL.calculate_optimal_k(doc, k_max=20)
-        sys.stderr.write(f'Optimal num clusters = {optimal_k}\n')
-
         sentences, indices = \
             MODEL(doc, ratio=ratio, max_length=250, use_first=False, return_as_list=True,
                   sents_per_cluster=sents_per_cluster)
